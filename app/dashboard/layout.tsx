@@ -7,13 +7,15 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
     <html lang="en">
       <body className="bg-[#12121c] text-white font-sans">
         <div className="flex min-h-screen">
+          {/* Sidebar - fixed width w-80 */}
           <Sidebar />
-          <div className="flex-1 flex flex-col ml-72">
-          <Navbar />
-          <main className="flex-1 p-6">{children}</main>
-          <Footer />
+          
+          {/* Main Content shifted by ml-80 to avoid overlap */}
+          <div className="flex-1 flex flex-col ml-80">
+            <Navbar />
+            <main className="flex-1 p-6">{children}</main>
+            <Footer />
           </div>
-
         </div>
       </body>
     </html>

@@ -78,13 +78,6 @@ const Page = () => {
                   <td className="px-6 py-4">{loan.totalToPayBack.toLocaleString()}</td>
                   <td className="px-6 py-4">{new Date(loan.dueDate).toLocaleDateString()}</td>
                   <td className="px-6 py-4">
-                    <span
-                      className={`inline-block text-xs font-semibold text-white px-3 py-1 rounded-full ${
-                        statusStyles[loan.status] || "bg-gray-600"
-                      }`}
-                    >
-                      {loan.status}
-                    </span>
                   </td>
                   <td className="px-6 py-4 flex gap-2">
                     <button className="text-indigo-400 hover:text-indigo-300 font-medium transition">Edit</button>
