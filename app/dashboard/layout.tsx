@@ -1,12 +1,21 @@
-import React from 'react'
+import Sidebar from "@/components/Sidebar";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
-const Layout = ({ children }: { children: React.ReactNode }) => {
+export default function DashboardLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div>
-      <h1 className="text-3xl">NAVBAR</h1>
-      {children}
-    </div>
-  )
-}
+    <html lang="en">
+      <body className="bg-[#12121c] text-white font-sans">
+        <div className="flex min-h-screen">
+          <Sidebar />
+          <div className="flex-1 flex flex-col ml-72">
+          <Navbar />
+          <main className="flex-1 p-6">{children}</main>
+          <Footer />
+          </div>
 
-export default Layout
+        </div>
+      </body>
+    </html>
+  );
+}
